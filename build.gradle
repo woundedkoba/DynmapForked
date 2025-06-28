@@ -22,7 +22,7 @@ apply plugin: 'eclipse'
 
 eclipse {
     project {
-        name = "Dynmap"
+        name = "DynmapForked"
     }
 }
 
@@ -41,7 +41,7 @@ allprojects  {
   apply plugin: 'java'
   
   group = 'us.dynmap'
-  version = '3.7-SNAPSHOT'
+  version = 'v0.0.1'
 
 }
 

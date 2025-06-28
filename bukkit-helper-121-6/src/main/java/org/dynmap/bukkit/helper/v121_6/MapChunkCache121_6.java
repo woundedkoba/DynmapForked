@@ -8,8 +8,8 @@ import net.minecraft.world.level.chunk.Chunk;
 import net.minecraft.world.level.chunk.storage.SerializableChunkData;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
-import org.bukkit.craftbukkit.v1_21_R4.CraftServer;
-import org.bukkit.craftbukkit.v1_21_R4.CraftWorld;
+import org.bukkit.craftbukkit.v1_21_R5.CraftServer;
+import org.bukkit.craftbukkit.v1_21_R5.CraftWorld;
 import org.dynmap.DynmapChunk;
 import org.dynmap.bukkit.helper.BukkitWorld;
 import org.dynmap.common.BiomeMap;
@@ -62,7 +62,7 @@ public class MapChunkCache121_6 extends GenericMapChunkCache {
 	@Override
 	protected Supplier<GenericChunk> loadChunkAsync(DynmapChunk chunk) {
 		CraftWorld cw = (CraftWorld) w;
-		CompletableFuture<Optional<NBTTagCompound>> genericChunk = cw.getHandle().m().a.d(new ChunkCoordIntPair(chunk.x, chunk.z)); // WorldServer.getChunkSource().chunkMap.read(new ChunkCoordIntPair(chunk.x, chunk.z))
+		CompletableFuture<Optional<NBTTagCompound>> genericChunk = cw.getHandle().n().a.d(new ChunkCoordIntPair(chunk.x, chunk.z)); // WorldServer.getChunkSource().chunkMap.read(new ChunkCoordIntPair(chunk.x, chunk.z))
 		return () -> genericChunk.join().map(NBT.NBTCompound::new).map(this::parseChunkFromNBT).orElse(null);
 	}
 
@@ -73,7 +73,7 @@ public class MapChunkCache121_6 extends GenericMapChunkCache {
 		GenericChunk gc = null;
 		try {	// BUGBUG - convert this all to asyn properly, since now native async
 			nbt = cw.getHandle()
-					.m() // ServerLevel.getChunkSource
+					.n() // ServerLevel.getChunkSource
 					.a // ServerChunkCache.chunkMap
 					.d(cc) // ChunkStorage.read(ChunkPos)
 					.join().get();

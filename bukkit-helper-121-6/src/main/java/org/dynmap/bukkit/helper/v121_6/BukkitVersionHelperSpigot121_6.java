@@ -1,9 +1,9 @@
 package org.dynmap.bukkit.helper.v121_6;
 
 import org.bukkit.*;
-import org.bukkit.craftbukkit.v1_21_R4.CraftChunk;
-import org.bukkit.craftbukkit.v1_21_R4.CraftWorld;
-import org.bukkit.craftbukkit.v1_21_R4.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_21_R5.CraftChunk;
+import org.bukkit.craftbukkit.v1_21_R5.CraftWorld;
+import org.bukkit.craftbukkit.v1_21_R5.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 import org.dynmap.DynmapChunk;
 import org.dynmap.Log;
@@ -101,7 +101,7 @@ public class BukkitVersionHelperSpigot121_6 extends BukkitVersionHelper {
 
 	private static IRegistry<BiomeBase> getBiomeReg() {
 		if (reg == null) {
-			reg = MinecraftServer.getServer().ba().f(Registries.aG); // MinecraftServer.registryAccess().lookupOrThrow(Registries.BIOME)
+			reg = MinecraftServer.getServer().ba().f(Registries.aK); // MinecraftServer.registryAccess().lookupOrThrow(Registries.BIOME)
 		}
 		return reg;
 	}
@@ -332,26 +332,26 @@ public class BukkitVersionHelperSpigot121_6 extends BukkitVersionHelper {
 	@Override
 	public int getTileEntityX(Object te) {
 		TileEntity tileent = (TileEntity) te;
-		return tileent.ax_().u(); // TileEntity.getBlockPos ; Vec3i.getX
+		return tileent.aA_().u(); // TileEntity.getBlockPos ; Vec3i.getX
 	}
 
 	@Override
 	public int getTileEntityY(Object te) {
 		TileEntity tileent = (TileEntity) te;
-		return tileent.ax_().v(); // TileEntity.getBlockPos ; Vec3i.getY
+		return tileent.aA_().v(); // TileEntity.getBlockPos ; Vec3i.getY
 	}
 
 	@Override
 	public int getTileEntityZ(Object te) {
 		TileEntity tileent = (TileEntity) te;
-		return tileent.ax_().w(); // TileEntity.getBlockPos ; Vec3i.getZ
+		return tileent.aA_().w(); // TileEntity.getBlockPos ; Vec3i.getZ
 	}
 
 	@Override
 	public Object readTileEntityNBT(Object te, org.bukkit.World w) {
 		TileEntity tileent = (TileEntity) te;
 		CraftWorld cw = (CraftWorld) w;
-		return tileent.e(cw.getHandle().J_()); // TileEntity.saveCustomOnly ; LevelReader.registryAccess
+		return tileent.a(cw.getHandle().K_()); // TileEntity.saveCustomOnly ; LevelReader.registryAccess
 	}
 
 	@Override
