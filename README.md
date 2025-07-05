@@ -40,6 +40,9 @@ For more check [contributing rules](#contributing-to-dynmaps-code).
 
     ./gradlew :fabric-1.18:build
 
+To ensure you’re building from a clean state (removes old files and rebuilds everything), use:
+
+    ./gradlew clean :spigot:build
     
 # What platforms are supported?
 The following target platforms are supported, and you can find them at the links supplied:
