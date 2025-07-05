@@ -94,8 +94,8 @@ public class BukkitVersionHelperCB extends BukkitVersionHelperGeneric {
         }
         /* Set up biomebase fields */
         if (isBiomeBaseListNeeded()) {
-        	biomebase = getNMSClass("net.minecraft.server.BiomeBase");
-        	biomebasearray =  getNMSClass("[Lnet.minecraft.server.BiomeBase;");
+            biomebase = getNMSClass("net.minecraft.server.BiomeBase");
+            biomebasearray = getNMSClass("[Lnet.minecraft.server.BiomeBase;"); //net.minecraft.world.level.biome.BiomeBase
         	biomebaselist = getPrivateFieldNoFail(biomebase, new String[] { "biomes" }, biomebasearray);
         	if (biomebaselist == null) {
         		getbiomefunc = getMethodNoFail(biomebase, new String[] { "getBiome" }, new Class[] { int.class, biomebase });
