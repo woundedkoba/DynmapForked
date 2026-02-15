@@ -47,15 +47,15 @@ To ensure you’re building from a clean state (removes old files and rebuilds e
 # What platforms are supported?
 The following target platforms are supported, and you can find them at the links supplied:
 
-| Server type    | Version         | Dynmap JAR                                 | Where?                                                                     |
-|----------------|-----------------|--------------------------------------------|----------------------------------------------------------------------------|
-| Spigot/PaperMC | ≤1.21.7         | `DynmapForked-<version>-spigot.jar`        | [WoundedKoba Github](https://github.com/woundedkoba/DynmapForked/releases) |
-| Spigot/PaperMC | ≤1.21.7         | `Dynmap-<version>-spigot.jar`              | [Chaosjan44 Github](https://github.com/Chaosjan44/dynmap/releases)         |
-| Spigot/PaperMC | ≤1.21.4         | `Dynmap-<version>-spigot.jar`              | [SpigotMC](https://www.spigotmc.org/resources/dynmap%C2%AE.274/)           |
-| Spigot/PaperMC | ≤1.21.4         | `Dynmap-<version>-spigot.jar`              | [Modrinth](https://modrinth.com/plugin/dynmap/versions?l=paper&l=spigot)   |
-| Forge          | 1.12.2 - 1.20.6 | `Dynmap-<version>-forge-<MC_VERSION>.jar`  | [Curseforge](https://www.curseforge.com/minecraft/mc-mods/dynmapforge)     |
-| Fabric         | 1.14.4 - 1.21.7 | `Dynmap-<version>-fabric-<MC_VERSION>.jar` | [reusteuer73 Github](https://github.com/reusteur73/dynmap/releases)        |
-| Fabric         | 1.14.4 - 1.21.4 | `Dynmap-<version>-fabric-<MC_VERSION>.jar` | [Curseforge](https://www.curseforge.com/minecraft/mc-mods/dynmapforge)     |
+| Server type    | Version          | Dynmap JAR                                 | Where?                                                                     |
+|----------------|------------------|--------------------------------------------|----------------------------------------------------------------------------|
+| Spigot/PaperMC | ≤1.21.11         | `DynmapForked-<version>-spigot.jar`        | [WoundedKoba Github](https://github.com/woundedkoba/DynmapForked/releases) |
+| Spigot/PaperMC | ≤1.21.11         | `Dynmap-<version>-spigot.jar`              | [Chaosjan44 Github](https://github.com/Chaosjan44/dynmap/releases)         |
+| Spigot/PaperMC | ≤1.21.11         | `Dynmap-<version>-spigot.jar`              | [SpigotMC](https://www.spigotmc.org/resources/dynmap%C2%AE.274/)           |
+| Spigot/PaperMC | ≤1.21.4          | `Dynmap-<version>-spigot.jar`              | [Modrinth](https://modrinth.com/plugin/dynmap/versions?l=paper&l=spigot)   |
+| Forge          | 1.12.2 - 1.21.11 | `Dynmap-<version>-forge-<MC_VERSION>.jar`  | [Curseforge](https://www.curseforge.com/minecraft/mc-mods/dynmapforge)     |
+| Fabric         | 1.14.4 - 1.21.11 | `Dynmap-<version>-fabric-<MC_VERSION>.jar` | [reusteuer73 Github](https://github.com/reusteur73/dynmap/releases)        |
+| Fabric         | 1.14.4 - 1.21.11 | `Dynmap-<version>-fabric-<MC_VERSION>.jar` | [Curseforge](https://www.curseforge.com/minecraft/mc-mods/dynmapforge)     |
     
 # Data Storage
 Dynmap supports the following storage backends:

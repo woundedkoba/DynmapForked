@@ -39,9 +39,9 @@ allprojects  {
   }
 
   apply plugin: 'java'
-  
-  group = 'us.dynmap'
-  version = '0.0.2'
+
+  group = "io.github.woundedkoba.dynmapforked"
+  version = '0.0.3'
 
 }
 
