@@ -62,7 +62,7 @@ public class BukkitVersionHelperSpigot121_7 extends BukkitVersionHelper {
 		return false;
 	}
 
-	 /**
+	/**
 	 * Get block short name list
 	 */
 	@Override
@@ -124,9 +124,9 @@ public class BukkitVersionHelperSpigot121_7 extends BukkitVersionHelper {
 	public int getBiomeBaseID(Object bb) {
 		return getBiomeReg().a((BiomeBase)bb);
 	}
-	
+
 	public static IdentityHashMap<IBlockData, DynmapBlockState> dataToState;
-	
+
 	/**
 	 * Initialize block states (org.dynmap.renderer.DynmapBlockState)
 	 */
@@ -138,7 +138,7 @@ public class BukkitVersionHelperSpigot121_7 extends BukkitVersionHelper {
 		Block baseb = null;
 		Iterator<IBlockData> iter = bsids.iterator();
 		ArrayList<String> names = new ArrayList<String>();
-		
+
 		// Loop through block data states
 		DynmapBlockState.Builder bld = new DynmapBlockState.Builder();
 		while (iter.hasNext()) {
@@ -173,7 +173,7 @@ public class BukkitVersionHelperSpigot121_7 extends BukkitVersionHelper {
 				//Log.info("statename=" + bname + "[" + sb + "] = waterlogged");
 			}
 			DynmapBlockState dbs = bld.build(); // Build state
-			
+
 			dataToState.put(bd,  dbs);
 			lastBlockState.put(bname, (lastbs == null) ? dbs : lastbs);
 			Log.verboseinfo("blk=" + bname + ", idx=" + idx + ", state=" + sb + ", waterlogged=" + dbs.isWaterlogged());
@@ -191,7 +191,7 @@ public class BukkitVersionHelperSpigot121_7 extends BukkitVersionHelper {
 		c.setChunks(dw, chunks);
 		return c;
 	}
-	
+
 	/**
 	 * Get biome base water multiplier
 	 */
@@ -218,7 +218,7 @@ public class BukkitVersionHelperSpigot121_7 extends BukkitVersionHelper {
 		}
 		return humidity;
 	}
-	
+
 	@Override
 	public Polygon getWorldBorder(World world) {
 		Polygon p = null;
@@ -243,7 +243,7 @@ public class BukkitVersionHelperSpigot121_7 extends BukkitVersionHelper {
 			p.sendTitle(title, subtitle, fadeInTicks, stayTicks, fadeOutTIcks);
 		}
 	}
-	
+
 	/**
 	 * Get material map by block ID
 	 */
@@ -391,7 +391,7 @@ public class BukkitVersionHelperSpigot121_7 extends BukkitVersionHelper {
 	public double getHealth(Player p) {
 		return p.getHealth();
 	}
-	
+
 	private static final Gson gson = new GsonBuilder().create();
 
 	/**
@@ -425,7 +425,7 @@ public class BukkitVersionHelperSpigot121_7 extends BukkitVersionHelper {
 					}
 				}
 			}
-		}		
+		}
 		return url;
 	}
 	// Get minY for world
