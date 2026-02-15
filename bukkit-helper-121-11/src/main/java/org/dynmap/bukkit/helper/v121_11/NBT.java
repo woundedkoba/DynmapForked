@@ -67,7 +67,7 @@ public class NBT {
 		}
 		@Override
 		public String getString(String s) {
-			return obj.b(s, ""); // CompoundTag.getDoubleOr
+			return obj.b(s, ""); // CompoundTag.getStringOr
 		}
 		@Override
 		public byte[] getByteArray(String s) {
