@@ -40,6 +40,9 @@ public class Helper {
                 Log.info("Loading Glowstone support");
                 BukkitVersionHelper.helper = loadVersionHelper("org.dynmap.bukkit.helper.BukkitVersionHelperGlowstone");
             }
+            else if (v.contains("(MC: 1.21.11")) {
+                BukkitVersionHelper.helper = loadVersionHelper("org.dynmap.bukkit.helper.v121_7.BukkitVersionHelperSpigot121_7");
+            }
             else if (v.contains("(MC: 1.21.7")) {
                 BukkitVersionHelper.helper = loadVersionHelper("org.dynmap.bukkit.helper.v121_7.BukkitVersionHelperSpigot121_7");
             }
@@ -57,6 +60,9 @@ public class Helper {
             }
             else if (v.contains("(MC: 1.21)") || v.contains("(MC: 1.21.1)")) {
                 BukkitVersionHelper.helper = loadVersionHelper("org.dynmap.bukkit.helper.v121.BukkitVersionHelperSpigot121");
+            }
+            else if (v.contains("(MC: 1.21.")) { // Set up in case 1.21.12 works 'as is'
+                BukkitVersionHelper.helper = loadVersionHelper("org.dynmap.bukkit.helper.v121_7.BukkitVersionHelperSpigot121_7");
             }
             else if (v.contains("(MC: 1.20)") || v.contains("(MC: 1.20.1)")) {
             	BukkitVersionHelper.helper = loadVersionHelper("org.dynmap.bukkit.helper.v120.BukkitVersionHelperSpigot120");
